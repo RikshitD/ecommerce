@@ -4,7 +4,7 @@
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "test": "jest", // Modify the test script to run Jest
+    "test": "jest",
     "start": "nodemon server/server.js",
     "dev": "nodemon server/server.js"
   },
@@ -24,6 +24,7 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.24.6",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^15.0.7",
     "@types/jest": "^29.5.12",
