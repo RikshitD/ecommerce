@@ -2,6 +2,13 @@ pipeline {
     agent any
 
     stages {
+        stage('Checkout') {
+            steps {
+                // Checkout code from Git repository
+                checkout scm
+            }
+        }
+        
         stage('Unit Tests') {
             steps {
                 // Install dependencies and run unit tests with Jest
@@ -20,15 +27,15 @@ pipeline {
         stage('Build') {
             steps {
                 // Perform any necessary build steps
-                // For example: npm run build
+                sh 'npm run build'
             }
         }
         
         stage('Deploy') {
             steps {
                 // Deploy your application
-                // Example: npm run deploy
                 // Replace this with your actual deployment command
+                sh 'npm run deploy'
             }
         }
     }
@@ -43,3 +50,4 @@ pipeline {
         }
     }
 }
+
